@@ -7,7 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(CTest)
 enable_testing()
 
-add_executable(InheritedSingleton main.cpp)
+add_executable(${PROJECT_NAME}
+    main.cpp
+    AbstractSingleton.hpp
+    ConcreteSingleton.hpp
+)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
